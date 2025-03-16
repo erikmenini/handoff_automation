@@ -1,10 +1,8 @@
-import homeActions from '../home/homeActions'
+import estimateActions from '../estimate/estimate.actions'
 import loginPages from '../../page-objects/login/login.pages'
 import authActions from '../authentication/auth.actions'
 import { scrollToSelector } from '../../utils/scroll'
 import { userModel } from '../../interface/user.model'
-
-
 
 class LoginActions {
   constructor() {
@@ -21,7 +19,7 @@ class LoginActions {
 
 
   public async performLogout() {
-    await homeActions.clickEstimatesButton()
+    await estimateActions.clickEstimatesButton()
     await this.clickEngineButton()
     await scrollToSelector("~logout, Sign out")
     await this.clickLogoutButton()

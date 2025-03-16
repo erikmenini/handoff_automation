@@ -1,6 +1,5 @@
 import { userModel } from '../../interface/user.model'
 import onboardingPage from '../../page-objects/onboarding/onboarding.pages'
-import homePages from '../../page-objects/home/home.pages'
 import authActions from '../authentication/auth.actions'
 
 
