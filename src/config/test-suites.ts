@@ -5,5 +5,8 @@ export const suites = {
     login: [
       '../tests/login/login-make-login-successfull.spec.ts',
     ],
+    estimate: [
+      '../tests/estimate/estimate-create-sucessfull.spec.ts',
+    ]
   }
   

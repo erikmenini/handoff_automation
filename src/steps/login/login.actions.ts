@@ -22,7 +22,9 @@ class LoginActions {
     await estimateActions.clickEstimatesButton()
     await this.clickEngineButton()
     await scrollToSelector("~logout, Sign out")
+    await browser.pause(1000)
     await this.clickLogoutButton()
+    await browser.pause(3000)
   }
 
   public async fillPhoneInput(phone: string) {

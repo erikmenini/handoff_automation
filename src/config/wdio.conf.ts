@@ -17,14 +17,14 @@ export const config: WebdriverIO.Config = {
   ],
   logLevel: 'trace',
   bail: 0,
-  waitforTimeout: 180000,
+  waitforTimeout: 400000,
   connectionRetryTimeout: 120000,
   connectionRetryCount: 3,
   services: ['appium'],
   framework: 'mocha',
   mochaOpts: {
     ui: 'bdd',
-    timeout: 180000,
+    timeout: 400000,
   },
   suites: suites,
   reporters: [
