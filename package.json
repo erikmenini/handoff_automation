@@ -3,7 +3,9 @@
     "version": "1.0.0",
     "main": "index.js",
     "scripts": {
-        "test:android": "",
+        "test:android:all": "wdio run ./src/config/wdio.conf.ts",
+        "test:android:login": "wdio run ./src/config/wdio.conf.ts --suite login",
+        "test:android:onboarding": "wdio run ./src/config/wdio.conf.ts --suite onboarding",
         "prepare": "husky"
     },
     "keywords": [],
@@ -14,10 +16,12 @@
         "@eslint/js": "^9.17.0",
         "@types/faker": "^6.6.8",
         "@wdio/allure-reporter": "^9.10.1",
+        "@wdio/appium-service": "^9.12.0",
         "@wdio/cli": "^8.41.0",
         "@wdio/local-runner": "^8.41.0",
         "@wdio/mocha-framework": "^8.41.0",
         "@wdio/spec-reporter": "^9.10.1",
+        "appium": "^2.17.0",
         "appium-uiautomator2-driver": "^3.9.4",
         "eslint": "^9.17.0",
         "eslint-config-prettier": "^9.1.0",

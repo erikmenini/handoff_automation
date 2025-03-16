@@ -1,21 +1,18 @@
-import path from 'path'
-//import { suites } from '../suites/test-suites'
+import { suites } from './test-suites'
 
 export const config: WebdriverIO.Config = {
-  //tsConfigPath: './tsconfig.json',
-  specs: ['../../tests/**/*.spec.ts'],
+  specs: ['../tests/**/*.spec.ts'],
   exclude: [],
   maxInstances: 2,
   capabilities: [
     {
         platformName: 'Android',
-        'appium:deviceName': 'Pixel 7 Pro API 35',
+        'appium:deviceName': 'Pixel 8 Pro',
         'appium:platformVersion': '15',
         'appium:automationName': 'UiAutomator2',
         'appium:app': `./app/handoff-155-aab.apk`, 
-        'appium:locale': 'BR',
-        'appium:language': 'pt_BR',
         'appium:autoGrantPermissions': true,
+        'appium:unicodeKeyboard': true,
     },
   ],
   logLevel: 'trace',
@@ -29,7 +26,7 @@ export const config: WebdriverIO.Config = {
     ui: 'bdd',
     timeout: 180000,
   },
-  //suites: suites,
+  suites: suites,
   reporters: [
     'spec',
     [
