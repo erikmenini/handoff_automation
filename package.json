@@ -7,6 +7,7 @@
         "test:android:login": "wdio run ./src/config/wdio.conf.ts --suite login",
         "test:android:onboarding": "wdio run ./src/config/wdio.conf.ts --suite onboarding",
         "test:android:estimate": "wdio run ./src/config/wdio.conf.ts --suite estimate",
+        "test:android:client": "wdio run ./src/config/wdio.conf.ts --suite client",
         "prepare": "husky"
     },
     "keywords": [],

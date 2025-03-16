@@ -1,22 +1,28 @@
 import loginActions from '../../steps/login/login.actions'
 import { activeUser } from '../../data/user'
+import clientActions from '../../steps/client/client.actions'
+import { client } from '../../data/client'
 import estimateActions from '../../steps/estimate/estimate.actions'
-import { bathroomEstimate, bathroomEstimateEdit} from '../../data/estimate'
+import { bathroomEstimate } from '../../data/estimate'
 
-describe('Estimate feature', () => {
-  context('Create a estimative', () => {
+describe('Client feature', () => {
+  context('Create a client', () => {
 
-    it('Create a new estimative and logout', async () => {
+    it('Create a new client, estimative and logout', async () => {
         await loginActions.performLogin(activeUser())
-        await estimateActions.clickNewButton()
+        await clientActions.clickClientButtonMenu()
+        await clientActions.createNewClient(client())
+        await estimateActions.clickAddEstimateButton()
         await estimateActions.createEstimate(bathroomEstimate())
-        await estimateActions.editEstimate(bathroomEstimateEdit())
         await estimateActions.clickReviewEstimateButton()
         await estimateActions.clickCreateProposalButton()
         await estimateActions.clickPreviewSendButton()
         await estimateActions.clickSendProposalButton()
-        await estimateActions.searchClient("Erik")
+        await estimateActions.clickCheckboxEmail()
+        await estimateActions.clickSendButton()
+        await estimateActions.clickEstimateButton()
         await estimateActions.checkProposalStatus()
+        await estimateActions.clickArrowBackButton()
         await estimateActions.clickArrowBackButton()
         await loginActions.performLogout()
         await loginActions.checkUserLogout()

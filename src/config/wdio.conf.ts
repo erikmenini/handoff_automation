@@ -3,7 +3,7 @@ import { suites } from './test-suites'
 export const config: WebdriverIO.Config = {
   specs: ['../tests/**/*.spec.ts'],
   exclude: [],
-  maxInstances: 2,
+  maxInstances: 1,
   capabilities: [
     {
         platformName: 'Android',
@@ -15,9 +15,9 @@ export const config: WebdriverIO.Config = {
         'appium:unicodeKeyboard': true,
     },
   ],
-  logLevel: 'trace',
+  logLevel: 'info',
   bail: 0,
-  waitforTimeout: 400000,
+  waitforTimeout: 300000,
   connectionRetryTimeout: 120000,
   connectionRetryCount: 3,
   services: ['appium'],

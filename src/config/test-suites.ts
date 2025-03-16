@@ -7,6 +7,9 @@ export const suites = {
     ],
     estimate: [
       '../tests/estimate/estimate-create-sucessfull.spec.ts',
+    ],
+    client: [
+      '../tests/client/client-new-creation-estimative.spec.ts',
     ]
   }
   

@@ -1,4 +1,3 @@
-import { clientModel } from '../../interface/client.model'
 import { estimateModel } from '../../interface/estimate.model'
 import estimatePages from '../../page-objects/estimate/estimate.pages'
 
@@ -14,9 +13,12 @@ class estimateActions {
     await estimatePages.newButton.click()
   }
   public async createEstimate(input: estimateModel) {  
-    await this.clickNewButton()
     await this.fillInputHandoffAI(input.message)
     await this.clickArrowbutton()
+  }
+
+  public async clickAddEstimateButton() {
+    await estimatePages.addEstimateButton.click()
   }
 
   public async editEstimate(inputEdit: estimateModel) {
@@ -31,6 +33,7 @@ class estimateActions {
   }
 
   public async clickArrowbutton() {
+    await browser.pause(2000)
     await estimatePages.arrowButton.click()
   }
 
@@ -51,14 +54,35 @@ class estimateActions {
     await estimatePages.sendProposalButton.click()
   }
 
+  public async clickCheckboxEmail(){
+    await estimatePages.emailCheckbox.click()
+  }
 
-  public async searchClient(clientName: string){
+  public async fillInputSearchCient(clientName: string){
     await estimatePages.inputSearchClient.click()
     await estimatePages.inputSearchClient.setValue(clientName)
+  }
+
+  public async clickClientSelect(){
     await estimatePages.clientSelect.click()
-    await estimatePages.emailCheckbox.click()
+  }
+
+  public async clickSendButton(){
     await estimatePages.sendButton.click()
+  }
+
+  public async clickEstimateButton(){
     await estimatePages.estimateButton.click()
+  }
+
+
+
+  public async searchClient(clientName: string){
+    await this.fillInputSearchCient(clientName)
+    await this.clickClientSelect()
+    await this.clickCheckboxEmail()
+    await this.clickSendButton()
+    await this.clickEstimateButton()
   }
 
   public async checkProposalStatus() {
@@ -67,6 +91,7 @@ class estimateActions {
   }
 
   public async clickArrowBackButton() {
+    await browser.pause(1000)
     await estimatePages.arrowBackbottom.click()
   }
 

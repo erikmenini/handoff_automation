@@ -1,0 +1,17 @@
+name: Night Test Execution iOS
+
+on:
+  schedule:
+    - cron: '0 23 * * *'
+  workflow_dispatch:
+
+jobs:
+  run-tests-android:
+    name: Run Tests on iOS
+    uses: ahttps://github.com/erikmenini/handoff_automation/.github/workflows/reusable_e2e_flow.yml@develop
+    with:
+      ambiente: DEV
+      platform: iOS
+      execution_type: DAILY
+      app_version: latest
+    secrets: inherit

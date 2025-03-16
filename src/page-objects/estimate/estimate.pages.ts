@@ -57,6 +57,10 @@ class HomePage {
   public get arrowBackbottom() {
     return $('~arrow_back')
   }
+
+  public get addEstimateButton(){
+    return $('~Add Estimate')
+  }
 }
 
 export default new HomePage()
