@@ -50,6 +50,7 @@ public async clickPhoneButton() {
   }
 
   public async checkUserLogout() {
+    browser.pause(1000)
     expect(await loginPages.phoneButton.isDisplayed()).toBeTruthy()
   }
 }

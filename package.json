@@ -3,7 +3,7 @@
     "version": "1.0.0",
     "main": "index.js",
     "scripts": {
-        "test:android:all": "wdio run ./src/config/wdio.conf.ts",
+        "test:android:all": "wdio run ./src/config/wdio.conf.ts --suite all",
         "test:android:login": "wdio run ./src/config/wdio.conf.ts --suite login",
         "test:android:onboarding": "wdio run ./src/config/wdio.conf.ts --suite onboarding",
         "test:android:estimate": "wdio run ./src/config/wdio.conf.ts --suite estimate",
