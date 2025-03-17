@@ -75,11 +75,7 @@ The necessary changes will be:
 
 3. Running the tests
 To run, execute in the terminal: npm run <execution-command>
-
-Possible commands:
-Para executar execute no terminal: npm run <comando-para-execução>
-
-Possíveis comandos:
+Possible commands: 
 
 ````
 test:android:all
@@ -87,30 +83,34 @@ test:android:all
 
 Run all tests on Android
 
-```
+````
 test:android:login
-```
+````
+
 Runs the login test suite on Android.
-```
+````
 test:android:onboarding
-```
+`````
+
 Runs the onboarding test suite on Android.
-```
+````
 test:android:estimate
-```
+`````
+
 Runs the estimate test suite on Android.
-```
+````
 test:android:client
-```
+````
 Runs the client test suite on Android.
-```
 
-Example
-```
+Example:
+
+````
 npm run test:android:all
-```
+````
 
-6. Observations
+
+### Observations
 - The .github folder contains a workflow that was not possible to check, this workflow executes the tests in dev, qa, and prod environments.
 - It's possible to run manually too on GitHub Actions, if this workflow works
 - The tests by the workflow will not run because they depend on BrowserStack to run, and the configuration only runs locally.
