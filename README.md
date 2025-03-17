@@ -5,7 +5,7 @@ Automation tests for the Handoff app on Android.
 ## 1. Test Plan
 To access the test plan, just click the link below:
 
-[Test Plan](https://drive.google.com/file/d/1Wy8lz5E_IjHyGLvKKAkH39M8HVaghaXs/view?usp=sharing)
+[Test Plan]([https://drive.google.com/file/d/1Wy8lz5E_IjHyGLvKKAkH39M8HVaghaXs/view?usp=sharing](https://drive.google.com/file/d/1fHx5VTlOfdGdi6FXmGJi3_FUdcVaW6lA/view?usp=sharing))
 
 ## 2. Android Studio Configuration
 
